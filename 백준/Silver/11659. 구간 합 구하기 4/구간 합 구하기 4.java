@@ -23,12 +23,13 @@ public class Main {
         }
         
         // 합배열을 가지고 구간합 구하기
+        StringBuilder output = new StringBuilder();
         for(int i = 0; i < questionCount; i++){
             stringTokenizer = new StringTokenizer(bufferedReader.readLine());
             int startIdx = Integer.parseInt(stringTokenizer.nextToken());
             int endIdx = Integer.parseInt(stringTokenizer.nextToken());
-
-            System.out.println(S[endIdx] - S[startIdx - 1]);
+            output.append(S[endIdx] - S[startIdx - 1]).append("\n");
         }
+        System.out.println(output.toString());
     }
 }
