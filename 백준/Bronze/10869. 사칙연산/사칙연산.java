@@ -10,7 +10,7 @@ public class Main {
         int A = Integer.parseInt(st.nextToken());
         int B = Integer.parseInt(st.nextToken());
         StringBuilder output = new StringBuilder();
-        output.append((A + B) + "\n" + (A - B) + "\n" + (A * B) + "\n" + (A / B) + "\n" + (A % B) + "\n");
+        output.append((A + B)).append("\n").append(A - B).append("\n").append(A * B).append("\n").append(A / B).append("\n").append(A % B).append("\n");
         System.out.println(output.toString());
     }
 }
