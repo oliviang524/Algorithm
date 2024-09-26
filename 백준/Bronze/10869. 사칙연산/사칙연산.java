@@ -12,5 +12,6 @@ public class Main {
         StringBuilder output = new StringBuilder();
         output.append((A + B)).append("\n").append(A - B).append("\n").append(A * B).append("\n").append(A / B).append("\n").append(A % B).append("\n");
         System.out.println(output.toString());
+        br.close();
     }
 }
