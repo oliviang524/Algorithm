@@ -9,9 +9,9 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int A = Integer.parseInt(st.nextToken());
         int B = Integer.parseInt(st.nextToken());
-        StringBuilder output = new StringBuilder();
-        output.append((A + B)).append("\n").append(A - B).append("\n").append(A * B).append("\n").append(A / B).append("\n").append(A % B).append("\n");
-        System.out.println(output.toString());
+        StringBuilder sb = new StringBuilder();
+        sb.append((A + B)).append("\n").append(A - B).append("\n").append(A * B).append("\n").append(A / B).append("\n").append(A % B).append("\n");
+        System.out.println(sb.toString());
         br.close();
     }
 }
