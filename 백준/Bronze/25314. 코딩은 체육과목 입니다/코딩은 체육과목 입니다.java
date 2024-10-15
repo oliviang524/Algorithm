@@ -7,9 +7,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < N ; i++){
-            if(i % 4 == 0) sb.append("long ");
-        }
+        for(int i = 0; i < N / 4 ; i++) sb.append("long ");
         sb.append("int");
         System.out.println(sb.toString());
         br.close();
