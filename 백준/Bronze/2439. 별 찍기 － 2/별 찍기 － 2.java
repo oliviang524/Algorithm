@@ -6,10 +6,8 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int N = Integer.parseInt(br.readLine());
         for(int i = 1 ; i <= N ; i++) {
-            if(i < N){
-                for(int j = N ; j > i ; j--){
-                    bw.append(" ");
-                }
+            for(int j = N ; j > i ; j--){
+                bw.append(" ");
             }
             for(int j = 1 ; j <= i ; j++){
                 bw.write("*");
