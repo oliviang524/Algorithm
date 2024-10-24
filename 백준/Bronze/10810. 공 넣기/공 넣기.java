@@ -9,11 +9,12 @@ public class Main {
         int M = Integer.parseInt(st.nextToken()); //바구니에 공을 넣는 횟수
 
         int A[] = new int[N]; //5개의 바구니
+        int I, J, K;
         for(int i = 0; i < M ; i++){ //
             st = new StringTokenizer(br.readLine(), " ");
-            int I = Integer.parseInt(st.nextToken());
-            int J = Integer.parseInt(st.nextToken());
-            int K = Integer.parseInt(st.nextToken());
+            I = Integer.parseInt(st.nextToken());
+            J = Integer.parseInt(st.nextToken());
+            K = Integer.parseInt(st.nextToken());
             for(int j = I ; j <= J ; j++) A[j - 1] = K;
         }
 
