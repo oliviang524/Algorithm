@@ -11,8 +11,7 @@ public class Main {
         int A[] = new int[N];
         for(int i = 0; i < N ; i++) A[i] = i + 1;
 
-        int I, J;
-        int temp;
+        int I, J, temp;
         for(int i = 0; i < M ; i++){ //
             st = new StringTokenizer(br.readLine(), " ");
             I = Integer.parseInt(st.nextToken());
@@ -22,7 +21,9 @@ public class Main {
             A[J - 1] = temp;
         }
 
-        for(int i = 0 ; i < A.length ; i++) System.out.print(A[i] + " ");
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0 ; i < A.length ; i++) sb.append(A[i]).append(" ");
+        System.out.println(sb.toString());
         br.close();
     }
 }
