@@ -5,13 +5,13 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int A = 42;
-        boolean B[] = new boolean[A];
+        int B[] = new int[A];
         for(int i = 0; i < 10; i++)
-            B[(Integer.parseInt(br.readLine())) % A] = true;
+            B[(Integer.parseInt(br.readLine())) % A] = 1;
 
         int count = 0;
         for(int i = 0; i < B.length; i++)
-            if(B[i]) count++;
+            if(B[i] == 1) count++;
 
         System.out.print(count);
         br.close();
