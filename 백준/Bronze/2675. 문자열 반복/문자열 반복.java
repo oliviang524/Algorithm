@@ -13,12 +13,10 @@ public class Main {
             st = new StringTokenizer(br.readLine(), " ");
             R = Integer.parseInt(st.nextToken());
             S = st.nextToken();
-            char C[] = S.toCharArray();
-            String A = "";
-            for(int j = 0; j < C.length ; j++){
-                for(int k = 0 ; k < R ; k++) A += C[j];
+            for(int j = 0; j < S.length() ; j++){
+                for(int k = 0 ; k < R ; k++) sb.append(S.charAt(j));
             }
-            sb.append(A).append("\n");
+            sb.append("\n");
         }
         System.out.print(sb.toString());
         br.close();
