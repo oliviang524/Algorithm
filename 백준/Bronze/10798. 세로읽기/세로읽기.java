@@ -5,18 +5,21 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
-        String A[][] = new String[15][15];
+        int N = 5;
+        int M = 15;
+
+        String A[][] = new String[N][M];
         String S;
 
-        for(int i = 0 ; i < 5 ; i++){
+        for(int i = 0 ; i < N ; i++){
             S = br.readLine();
             for(int j = 0 ; j < S.length() ; j++) {
                 A[i][j] = String.valueOf(S.charAt(j));
             }
         }
 
-        for(int i = 0 ; i < 15 ; i++){
-            for(int j = 0 ; j < 15 ; j++){
+        for(int i = 0 ; i < M ; i++){
+            for(int j = 0 ; j < N ; j++){
                 if(A[j][i] != null) sb.append(A[j][i]);
             }
         }
