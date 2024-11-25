@@ -1,5 +1,6 @@
 import java.io.*;
-import java.util.*;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -9,25 +10,22 @@ public class Main {
         int N = Integer.parseInt(st.nextToken()); //듣도 못한 사람의 수
         int M = Integer.parseInt(st.nextToken()); //보도 못한 사람의 수
 
-        HashSet<String> set = new HashSet<>(); //중복제거해주는 set사용
-        for(int i = 0 ; i < N ; i++) set.add(br.readLine());
-        
-        ArrayList<String> list = new ArrayList<>();
-        String temp = "";
-        for(int i = 0 ; i < M ; i++) {
-            temp = br.readLine(); //보도 못한 사람의 이름이
-            if(set.contains(temp)){ //듣도 못한 사람의 이름과 같다면
-                list.add(temp); //list에 추가
+        String names[] = new String[N + M]; //총 듣보잡 명단
+        for(int i = 0 ; i < names.length ; i++) names[i] = br.readLine();
+
+        Arrays.sort(names); //사전순정렬
+
+        StringBuilder sb = new StringBuilder();
+        int count = 0;
+        for(int i = 1 ; i < names.length ; i++){
+            if(names[i].equals(names[i - 1])) {
+                count++;
+                sb.append(names[i]).append("\n");
             }
         }
 
-        Collections.sort(list); //사전순으로 정렬
-
-        StringBuilder sb = new StringBuilder();
-        sb.append(list.size()).append("\n"); //듣보잡 수
-        for(String name : list) sb.append(name).append("\n"); //듣보잡명
-
-        System.out.println(sb.toString()); //출력
+        System.out.println(count);
+        System.out.print(sb.toString());
 
         br.close();
     }
