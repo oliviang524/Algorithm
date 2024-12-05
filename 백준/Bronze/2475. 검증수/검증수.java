@@ -7,8 +7,10 @@ public class Main {
         String S[] = br.readLine().split(" ");
 
         int sum = 0;
+        int a;
         for (int i = 0; i < S.length; i++) {
-            sum += Integer.parseInt(S[i]) * Integer.parseInt(S[i]);
+            a = Integer.parseInt(S[i]);
+            sum += (a * a);
         }
 
         System.out.print(sum % 10);
