@@ -4,12 +4,9 @@ public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        String jaehwan = br.readLine();
-        String doctor = br.readLine();
+        int jaehwan = br.readLine().length();
+        int doctor = br.readLine().length();
 
-        if (doctor.length() > jaehwan.length())
-            System.out.print("no");
-        else
-            System.out.print("go");
+        System.out.println(jaehwan < doctor ? "no" : "go");
     }
 }
